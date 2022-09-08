@@ -61,13 +61,12 @@ class Scene2 extends Phaser.Scene {
     this.physics.add.collider(BUILDINGS, this.player);
     this.physics.add.collider(OBJECTS, this.player);
 
-    //this.physics.add.overlap(this.player, ENTER_BUILDING, this.enterBuilding);
-
-    this.physics.add.overlap(
-      ENTER_BUILDING,
-      this.player,
-      this.enterBuilding
-    );
+    // this.physics.add.overlap(this.player, ENTER_BUILDING, this.enterBuilding);
+    // this.physics.add.overlap(
+    //   ENTER_BUILDING,
+    //   this.player,
+    //   this.enterBuilding
+    // );
 
     this.sound
       .add("bossa", {
@@ -126,9 +125,9 @@ class Scene2 extends Phaser.Scene {
     });
   }
 
-  enterBuilding() {
-    console.log("0");
-  }
+  // enterBuilding() {
+  //   console.log("0");
+  // }
 
   update() {
     if (this.cursors.left.isDown) {
