@@ -2,7 +2,7 @@ class Scene2 extends Phaser.Scene {
   playerVelocity = 46;
 
   constructor() {
-    super("game");
+    super('game');
   }
 
   preload() {
@@ -160,14 +160,15 @@ class Scene2 extends Phaser.Scene {
     /* TESTS */
 
     if (Math.round(this.player.x) == 480 && Math.round(this.player.y) == 426) {
-      this.scene.start('game-indoor');
+      console.log('Entrou!');
+      this.scene.start('gameIndoor');
     }
 
     if (Math.round(this.player.x) == 312 && Math.round(this.player.y) == 394) {
       alert("Eba! você encontrou uma placa!");
     }
 
-    console.log("x: " + this.player.x);
-    console.log("y: " + this.player.y);
+    // console.log("x: " + this.player.x);
+    // console.log("y: " + this.player.y);
   }
 }

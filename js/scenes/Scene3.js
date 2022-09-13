@@ -3,7 +3,7 @@ class Scene3 extends Phaser.Scene {
     playerVelocity = 38;
 
     constructor() {
-        super('game-indoor');
+        super('gameIndoor');
     }
 
     preload() {
@@ -19,9 +19,10 @@ class Scene3 extends Phaser.Scene {
     create() {
         const MAP = this.make.tilemap({ key: 'map-indoor' });
         MAP.addTilesetImage('orthographic-outdoor-tiles', 'tiles');
+
         var tileset = MAP.getTileset('orthographic-outdoor-tiles');
 
-        const FLOOR = MAP.createLayer('ground', tileset);
+        const GROUND = MAP.createLayer('ground', tileset);
 
         this.spawn = MAP.getObjectLayer('player', tileset).objects.find(i => i.name == 'spawn');
 
