@@ -68,6 +68,8 @@ class Scene2 extends Phaser.Scene {
     //   this.enterBuilding
     // );
 
+    console.log();
+
     this.sound
       .add("bossa", {
         loop: true,
@@ -154,5 +156,18 @@ class Scene2 extends Phaser.Scene {
     if (this.player.body.velocity.x == 0 && this.player.body.velocity.y == 0) {
       this.player.anims.play("stand", true);
     }
+
+    /* TESTS */
+
+    if (Math.round(this.player.x) == 480 && Math.round(this.player.y) == 426) {
+      this.scene.start('game-indoor');
+    }
+
+    if (Math.round(this.player.x) == 312 && Math.round(this.player.y) == 394) {
+      alert("Eba! você encontrou uma placa!");
+    }
+
+    console.log("x: " + this.player.x);
+    console.log("y: " + this.player.y);
   }
 }
